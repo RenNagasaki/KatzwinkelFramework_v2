@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Framework" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Framework" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="AppointmentObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="day" type="xs:int" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fromHour" type="xs:int" />
+      <xs:element minOccurs="0" name="fromMinute" type="xs:int" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="month" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="toHour" type="xs:int" />
+      <xs:element minOccurs="0" name="toMinute" type="xs:int" />
+      <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AppointmentObject" nillable="true" type="tns:AppointmentObject" />
+  <xs:complexType name="ArrayOfAppointmentObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AppointmentObject" nillable="true" type="tns:AppointmentObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAppointmentObject" nillable="true" type="tns:ArrayOfAppointmentObject" />
+  <xs:complexType name="ExpenseTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="expenseItems" nillable="true" type="tns:ArrayOfExpenseObject" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpenseTable" nillable="true" type="tns:ExpenseTable" />
+  <xs:complexType name="ArrayOfExpenseObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseObject" nillable="true" type="tns:ExpenseObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseObject" nillable="true" type="tns:ArrayOfExpenseObject" />
+  <xs:complexType name="ExpenseObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Recurring" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Type" type="tns:ExpenseType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpenseObject" nillable="true" type="tns:ExpenseObject" />
+  <xs:simpleType name="ExpenseType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Income" />
+      <xs:enumeration value="Household" />
+      <xs:enumeration value="DailyNeeds" />
+      <xs:enumeration value="Food" />
+      <xs:enumeration value="SpecialFood" />
+      <xs:enumeration value="Hardware" />
+      <xs:enumeration value="Games" />
+      <xs:enumeration value="Others" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExpenseType" nillable="true" type="tns:ExpenseType" />
+  <xs:complexType name="ArrayOfExpenseTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExpenseTable" nillable="true" type="tns:ExpenseTable" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExpenseTable" nillable="true" type="tns:ArrayOfExpenseTable" />
+</xs:schema>

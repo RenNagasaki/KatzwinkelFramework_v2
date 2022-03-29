@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="IAppointmentService" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="IAppointmentService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="IAppointmentService/Imports">
+      <xsd:import schemaLocation="http://localhost:3980/MainService?xsd=xsd0" namespace="IAppointmentService" />
+      <xsd:import schemaLocation="http://localhost:3980/MainService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:3980/MainService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Framework" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IManagerService_AddApointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddApointment" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_AddApointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddApointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_RemoveAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_RemoveAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_GetAppointments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointments" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_GetAppointments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppointmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_AddExpenseTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpenseTable" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_AddExpenseTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddExpenseTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_RemoveExpenseTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveExpenseTable" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_RemoveExpenseTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveExpenseTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_GetExpenseTables_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenseTables" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_GetExpenseTables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpenseTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_UpdateExpenseTables_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExpenseTables" />
+  </wsdl:message>
+  <wsdl:message name="IManagerService_UpdateExpenseTables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExpenseTablesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IManagerService">
+    <wsdl:operation name="AddApointment">
+      <wsdl:input wsaw:Action="IAppointmentService/IManagerService/AddApointment" message="tns:IManagerService_AddApointment_InputMessage" />
+      <wsdl:output wsaw:Action="IAppointmentService/IManagerService/AddApointmentResponse" message="tns:IManagerService_AddApointment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAppointment">
+      <wsdl:input wsaw:Action="IAppointmentService/IManagerService/RemoveAppointment" message="tns:IManagerService_RemoveAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="IAppointmentService/IManagerService/RemoveAppointmentResponse" message="tns:IManagerService_RemoveAppointment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppointments">
+      <wsdl:input wsaw:Action="IAppointmentService/IManagerService/GetAppointments" message="tns:IManagerService_GetAppointments_InputMessage" />
+      <wsdl:output wsaw:Action="IAppointmentService/IManagerService/GetAppointmentsResponse" message="tns:IManagerService_GetAppointments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="IAppointmentService/IManagerService/Login" message="tns:IManagerService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="IAppointmentService/IManagerService/LoginResponse" message="tns:IManagerService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddExpenseTable">
+      <wsdl:input wsaw:Action="IAppointmentService/IManagerService/AddExpenseTable" message="tns:IManagerService_AddExpenseTable_InputMessage" />
+      <wsdl:output wsaw:Action="IAppointmentService/IManagerService/AddExpenseTableResponse" message="tns:IManagerService_AddExpenseTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveExpenseTable">
+      <wsdl:input wsaw:Action="IAppointmentService/IManagerService/RemoveExpenseTable" message="tns:IManagerService_RemoveExpenseTable_InputMessage" />
+      <wsdl:output wsaw:Action="IAppointmentService/IManagerService/RemoveExpenseTableResponse" message="tns:IManagerService_RemoveExpenseTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpenseTables">
+      <wsdl:input wsaw:Action="IAppointmentService/IManagerService/GetExpenseTables" message="tns:IManagerService_GetExpenseTables_InputMessage" />
+      <wsdl:output wsaw:Action="IAppointmentService/IManagerService/GetExpenseTablesResponse" message="tns:IManagerService_GetExpenseTables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExpenseTables">
+      <wsdl:input wsaw:Action="IAppointmentService/IManagerService/UpdateExpenseTables" message="tns:IManagerService_UpdateExpenseTables_InputMessage" />
+      <wsdl:output wsaw:Action="IAppointmentService/IManagerService/UpdateExpenseTablesResponse" message="tns:IManagerService_UpdateExpenseTables_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

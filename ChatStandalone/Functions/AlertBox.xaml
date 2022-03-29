@@ -1,0 +1,9 @@
+﻿<Window x:Class="ChatStandalone.Functions.AlertBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AlertBox" Width="300" ResizeMode="NoResize" SizeToContent="Height" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
+    <Grid>
+        <TextBlock x:Name="text_alert" HorizontalAlignment="Stretch" Margin="5,5,5,30" VerticalAlignment="Top" TextWrapping="Wrap" Height="Auto"/>
+        <Button Content="OK" Width="75" Height="20" Margin="5,30,5,5" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="Button_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a84cef33-60e5-4e78-895a-fa3d6a719ed4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:3981/ChatService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service2.wsdl" MetadataType="Wsdl" ID="72500e73-efbb-4ddd-bf79-322dff6de3c6" SourceId="1" SourceUrl="net.tcp://localhost:3981/ChatService/mex" />
+    <MetadataFile FileName="service3.xsd" MetadataType="Schema" ID="10749c0f-82b6-4076-bb79-8f19dd768a81" SourceId="1" SourceUrl="net.tcp://localhost:3981/ChatService/mex" />
+    <MetadataFile FileName="service4.xsd" MetadataType="Schema" ID="9930756e-a0cf-4d4a-8c36-4a90b379f87c" SourceId="1" SourceUrl="net.tcp://localhost:3981/ChatService/mex" />
+    <MetadataFile FileName="Arrays2.xsd" MetadataType="Schema" ID="2f86bd37-2bc9-4771-a09a-af885352f605" SourceId="1" SourceUrl="net.tcp://localhost:3981/ChatService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

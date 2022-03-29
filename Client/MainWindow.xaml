@@ -1,0 +1,41 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:tb="http://www.hardcodet.net/taskbar" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="700" Width="850" MouseWheel="Window_MouseWheel" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" Closing="Window_Closing">
+    <Grid>
+        <TabControl x:Name="tabCtrl" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+            <TabItem x:Name="tab_appointments" Header="Appointments">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Menu HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="836">
+                        <MenuItem Name="menu_add" Header="Add Appointment" Click="menu_add_Click"/>
+                    </Menu>
+                    <Grid x:Name="grid_appointments" Background="#FFE5E5E5" Margin="0,25,0,0">
+                        <Grid.Clip>
+                            <RectangleGeometry x:Name="cliprect" Rect="0 0 400 300" />
+                        </Grid.Clip>
+                        <ScrollBar x:Name="scroll_apps" HorizontalAlignment="Right" Margin="0,0,0,0" ValueChanged="scroll_apps_ValueChanged"/>
+                        <Grid x:Name="grid_apps" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Margin="0,0,20,0" ClipToBounds="True"/>
+
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab_expenses" Header="Expenses">
+                <Grid Background="#FFE5E5E5" Margin="0,-2,0,2">
+                    <Menu HorizontalAlignment="Stretch" Height="20" VerticalAlignment="Top">
+                        <MenuItem x:Name="menu_expense_add"  Header="Add Table" Click="menu_expense_add_Click"/>
+                        <MenuItem x:Name="menu_expense_remove" Header="Remove Table" Click="menu_expense_remove_Click"/>
+                    </Menu>
+                    <TabControl x:Name="tabCtrl_expenses" HorizontalAlignment="Stretch" Margin="0,20,0,30" VerticalAlignment="Stretch"/>
+                    <Button x:Name="btn_expenses_reset" Content="Reset" HorizontalAlignment="Right" Margin="0,0,5,5" VerticalAlignment="Bottom" Width="75" Click="btn_expenses_reset_Click"/>
+                    <Button x:Name="btn_expenses_save" Content="Save" HorizontalAlignment="Right" Margin="0,0,85,5" VerticalAlignment="Bottom" Width="75" Click="btn_expenses_save_Click"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab_chat" Header="Chat">
+            </TabItem>
+        </TabControl>
+        <DataGrid HorizontalAlignment="Left" Margin="-191,346,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

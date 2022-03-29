@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="ChatStandalone.ChatMessage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="Auto" Width="300" VerticalAlignment="Top">
+    <Border x:Name="border_msg" CornerRadius="5" BorderBrush="Black" Background="Red" Height="Auto" HorizontalAlignment="Stretch">
+        <Grid Height="Auto" Width="Auto">
+            <Label x:Name="label_date" Background="Transparent" Margin="5,5,5,5" Width="Auto" Height="20" Padding="0,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+            <RichTextBox x:Name="text_message" Background="Transparent" IsDocumentEnabled="True" IsReadOnly="True" BorderThickness="0" Margin="5,25,5,5" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled">
+                <RichTextBox.Resources>
+                    <Style TargetType="{x:Type Paragraph}">
+                        <Setter Property="Margin" Value="0"/>
+                    </Style>
+                </RichTextBox.Resources>
+                <FlowDocument>
+                </FlowDocument>
+            </RichTextBox>
+        </Grid>
+    </Border>
+</UserControl>

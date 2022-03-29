@@ -1,0 +1,19 @@
+﻿<Window x:Class="ChatStandalone.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chatwinkel Login" Height="175.922" Width="175" ResizeMode="NoResize" Topmost="True">
+    <Grid>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Username:" />
+        <TextBox x:Name="text_username" HorizontalAlignment="Stretch" VerticalAlignment="Top" Text="Test" Margin="5,26,5,0" />
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="Password:" Margin="0,44,0,0" />
+        <PasswordBox x:Name="text_password" HorizontalAlignment="Stretch" VerticalAlignment="Top" Password="Test" Margin="5,70,5,0"/>
+        <Label x:Name="label_forgot" Foreground="Blue" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,88,0,0" MouseUp="label_forgot_MouseUp">
+            <TextBlock TextDecorations="Underline">
+                Forgot your password
+            </TextBlock>
+        </Label>
+        <Button x:Name="btn_login" Width="76" Height="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="Login" Margin="5,0,0,5" Click="btn_login_Click"/>
+        <Button x:Name="btn_register" Width="75" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Register" Margin="0,0,5,5" Click="btn_register_Click"/>
+
+    </Grid>
+</Window>

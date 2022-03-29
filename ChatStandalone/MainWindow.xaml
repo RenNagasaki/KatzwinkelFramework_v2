@@ -1,0 +1,8 @@
+﻿<Window x:Class="ChatStandalone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chatwinkel" Height="538" Width="754" WindowStartupLocation="CenterScreen" WindowState="Maximized" SizeChanged="Window_SizeChanged">
+    <Grid x:Name="grid_main">
+
+    </Grid>
+</Window>
